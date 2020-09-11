@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Workout timer</title>
+    <script src="https://kit.fontawesome.com/4d9800fcd3.js" crossorigin="anonymous"></script>
+    <script src="./workout-timer.js"></script>
+    <link href="./style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="l-wrapper">
+      <div class="page">
+        <h1 class="mb-30 title">Workout timer</h1>
+        <div class="workout js-workout">
+          <div class="workout__display">
+            <ol class="workout__items js-workout-items">
+
+              <li class="item --hidden js-item">
+                <div class="item__info">
+                  <h2 class="item__name js-item-name">Dead lift</h2>
+                  <h3 class="item__description js-item-description">12 reps</h3>
+                </div>
+                <div class="item__counter counter">
+                  Rep <span class="counter__count js-item-rep-count">3</span>
+                </div>
+                <div class="item__timer timer --round">
+                  <span class="timer__time js-item-time">1:20</span>
+                </div>
+              </li>
+
+              <li class="item --hidden js-item">
+                <div class="item__info">
+                  <h2 class="item__name js-item-name">Rest</h2>
+                  <h3 class="item__description js-item-description">30s</h3>
+                </div>
+                <div class="item__timer timer --round">
+                  <span class="timer__time js-item-time">1:20</span>
+                </div>
+              </li>
+
+            </ol>
+          </div>
+
+          <div class="workout__controls controls">
+            <div class="controls__timer timer">
+              <span class="timer__time js-workout-total-time">00:00:00</span>
+            </div>
+            <div class="controls__previous js-workout-previous">
+              <i class="fas fa-step-backward"></i>
+            </div>
+            <div class="controls__start-pause js-workout-play-pause">
+              <i class="fas fa-play js-workout-play-pause-icon"></i>
+            </div>
+            <div class="controls__next js-workout-next">
+              <i class="fas fa-step-forward"></i>
+            </div>
+            <div class="controls__counter counter">
+              <span class="counter__count js-workout-items-done">0/0</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,197 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+// Variables
+$theme-color: #000;
+
+// Root
+body {
+    font-family: 'Roboto', sans-serif;
+
+    background: #eee;
+}
+
+ul,
+ol {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+// Blocks
+.page {
+    padding: 20px;
+
+    background: #eee;
+}
+
+.title {
+    font-weight: lighter;
+
+    text-align: center;
+}
+
+.workout {
+    background: #fff;
+
+    &__items {
+        overflow-y: auto;
+
+        max-height: 70vh;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 20px;
+
+        color: #fff;
+        background: #222;
+    }
+}
+
+.controls {
+    &__timer {
+        flex: 3 1 0;
+
+        text-align: center;
+    }
+
+    &__previous {
+        font-size: 25px;
+
+        flex: 1 1 0;
+
+        cursor: pointer;
+    }
+
+    &__start-pause {
+        font-size: 25px;
+
+        flex: 1 1 0;
+
+        cursor: pointer;
+    }
+
+    &__next {
+        font-size: 25px;
+
+        flex: 1 1 0;
+
+        cursor: pointer;
+    }
+
+    &__counter {
+        flex: 3 1 0;
+
+        text-align: center;
+    }
+}
+
+.item {
+    display: flex;
+    align-items: center;
+
+    padding: 40px 25px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #eee;
+
+    &:hover {
+        background: #f5f5f5;
+    }
+
+    // Modifiers
+    &.--complete {
+        position: relative;
+    }
+    &.--complete::after {
+        position: absolute;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        content: '';
+
+        opacity: 80%;
+        background: #fff;
+    }
+
+    &.--hidden {
+        display: none;
+    }
+
+    &.--selected {
+        .item__timer {
+            background: green;
+        }
+    }
+
+    // Elements
+    &__info {
+        flex-grow: 10;
+    }
+
+    &__name {
+        font-size: 32px;
+    }
+
+    &__description {
+        font-size: 18px;
+        font-weight: lighter;
+
+        margin-top: 8px;
+    }
+
+    &__counter {
+        flex-grow: 2;
+    }
+}
+
+.counter {
+    font-weight: bold;
+}
+
+.timer {
+    color: #fff;
+
+    &.--round {
+        line-height: 45px;
+
+        display: inline-block;
+
+        width: 45px;
+        height: 45px;
+
+        text-align: center;
+
+        border-radius: 50%;
+        background: #000;
+    }
+}
+
+// Layout
+.l-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+// Helpers
+.mb-30 {
+    margin-bottom: 30px;
+}
